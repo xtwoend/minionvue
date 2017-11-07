@@ -1,0 +1,64 @@
+@checkbox-prefix-cls: ~"@{css-prefix}checkbox";
+.checkboxFn();
+
+.checkbox,
+.radio {
+  position: relative;
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.checkbox label,
+.radio label {
+  min-height: 20px;
+  padding-left: 25px;
+  margin-bottom: 0;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.checkbox input[type=checkbox],
+.checkbox-inline input[type=checkbox],
+.radio input[type=radio],
+.radio-inline input[type=radio] {
+  position: absolute;
+  margin-left: -20px;
+  margin-top: 4px;
+}
+
+.i-checks input {
+  opacity: 0;
+}
+
+.i-checks i {
+  width: 18px;
+  height: 18px;
+  line-height: 1;
+  border: 1px solid #cbd5dd;
+  background-color: #fff;
+  margin-right: 4px;
+  // margin-top: -2px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 4px;
+  margin-top: 2px;
+  position: absolute;
+  left: 0;
+}
+.i-checks i, .text-xs {
+  font-size: 12px;
+}
+.i-checks input[type=checkbox]:checked+i:before {
+  content: "\F122";
+}
+.i-checks input:checked+i:before {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  top: 2px;
+  text-align: center;
+  font-family: Ionicons;
+  font-style: normal;
+  font-weight: 400;
+  color: #545ca6;
+}
